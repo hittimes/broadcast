@@ -57,7 +57,8 @@ in the Network and Sharing Center section of the Windows Control Panel.
 
 You can find this list quickly by opening a Run prompt (WinKey+X -> Run or Start -> Run...)
 and entering:
-  `%windir%\explorer.exe shell:::{992CFFA0-F557-101A-88EC-00DD010CCC48}`
+
+`%windir%\explorer.exe shell:::{992CFFA0-F557-101A-88EC-00DD010CCC48}`
 
 ## Usage
 
@@ -75,13 +76,22 @@ for running BROADcast after starting a OpenVPN server:
   * `clients`: client OpenVPN configuration.
   * `config`: server OpenVPN configuration.
   * `scripts`: OpenVPN start / stop scripts that run BROADcast.
-  * `settings`: OpenVPN registry settings.
   * `static`: static IP client configuration.
-  * `tap`: install / uninstall the TAP Windows driver.
-  * `adjust.js`: script adjusting the OpenVPN config variables.
+  * `expand.js`: script adjusting the OpenVPN config variables.
   * `run.bat` and `run.js`: scripts for starting the OpenVPN GUI.
 
 Note that just like OpenVPN BROADcast requires administrator privileges to run.
+
+## ForceBindIP
+
+While not directly related to **BROADcast** or UDP broadcast at all,
+another useful Windows network crutch is [ForceBindIP](https://r1ch.net/projects/forcebindip)
+by r1ch.net.
+
+Unlike **BROADcast**, which provides a fix for UDP protocol,
+**ForceBindIP** provides a similar fix for TCP protocol and forces
+an application to listen on a particular network interface instead of the one
+it automatically chooses (which is often no the one you want).
 
 ## Building
 
