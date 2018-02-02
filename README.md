@@ -91,7 +91,7 @@ by r1ch.net.
 Unlike **BROADcast**, which provides a fix for UDP protocol,
 **ForceBindIP** provides a similar fix for TCP protocol and forces
 an application to listen on a particular network interface instead of the one
-it automatically chooses (which is often no the one you want).
+it automatically chooses (which is often not the one that you want).
 
 ## Building
 
